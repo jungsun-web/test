@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+
+main{
+    background: #333; 
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+header {width:20%;
+       height:100vh;
+       display:flex;
+       flex-wrap: wrap; 
+       align-content: space-between; /*세로축은 상단 하단 양끝으로 콘텐츠를 배치*/
+       justify-content: center;
+       color:white;
+       background:yellow;
+       }
+
+    
+section {width:80%;
+         height:100%;
+       
+         padding-top: 15vh;
+         display:flex;
+         background:blue;  }
+ section article { flex:1;
+            padding: 70px 40px 100px;
+             border:2px solid red;
+             height:100%;
+             cursor: pointer;} 
+   
+      .video {}
+   video {
+
+    width: 100%;
+	height: 100%;
+	object-fit: cover; /*영상이 figure 영역안에 꽉 차도록 설정*/
+	transform: scale(1.1);
+   }
+             
+             
+             

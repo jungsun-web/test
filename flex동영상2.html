@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    	
+    <title>FLEX 영상 소개</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/65f501c8da.js" crossorigin="anonymous"></script>
+    <script defer src="k.js"></script>  
+       
+    <style>
+    
+         @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+
+section{
+    background: #333; 
+    width:100%;
+    height:100vh;
+    display:flex;
+}
+
+
+    
+
+ section article { flex:1;
+            padding:40px;
+             border:2px solid red;
+             height:100%;
+             cursor: pointer;
+             
+             } 
+   
+  .text { background:yellow;
+          height:150px;}
+  .video {height:calc() - 150px;
+          width:100%;
+         padding-top:50px;  }  
+
+  .video>video {
+    width: 100%;
+	height: 100%;
+    filter:saturate(10%);
+	object-fit: cover; /*영상이 figure 영역안에 꽉 차도록 설정*/
+	
+   }
+    
+   
+    article:hover video {filter:saturate(100%);} 
+
+
+    aside {position:absolute;
+           left:-100vw;
+           top:0;
+           width:100%;
+           background:rgba(255,0,0,0.3);
+        z-index:100;
+    transition:2s;}
+ aside h1 {color:white;}
+     .active {
+          transform:translateX(100vw)
+     }   
+     button {padding:30px;}
+     </style>
+
+    
+</head>
+<body>    
+  
+
+        <section>
+            <article>
+                <div class="text">
+                    <h1>글자 영역</h1>
+                </div>
+                <div class="video">
+                   <video src="vids/vid1.mp4" loop muted>
+                </div>
+            </article>
+            
+            <article>
+                <div class="text">
+                    <h1>글자 영역</h1>
+                </div>
+                <div class="video">
+                   <video src="vids/vid2.mp4" loop muted>
+                </div>
+            </article>
+            <article>
+                <div class="text">
+                <h1>글자 영역</h1>
+            </div>
+            <div class="video">
+               <video src="vids/vid3.mp4" loop muted>
+            </div>
+            </article>
+            
+            <article>
+                <div class="text">
+                    <h1>글자 영역</h1>
+                </div>
+                <div class="video">
+                   <video src="vids/vid4.mp4" loop muted>
+                </div>
+            </article> 
+            
+            
+        </section>  
+        
+        <aside>
+            <h1>닫기 누르면 내가 사라져요.</h1>
+            <button>닫기</button>
+            <video src="vids/vid4.mp4" autoplay loop muted>
+        </aside>
+    
+
+         
+</body>
+</html>
